@@ -1,11 +1,12 @@
-c Faça um programa em FORTRAN que calcule a série de Taylor
-c e^x = 1 + x + x²/2 + x³/3 
+c Calcule o erro do programa que calcula a série de Taylor
+
+c Faça um programa (em Fotran) que calcule a série de Taylor:  e^x = 1 + x + x²/2 + x³/3 
 
 	program aulaDois
 	integer input, ordem, i
-	real*8 resultado, valor
+	real*8 e, erro, resultado, valor
 	
-
+	e = 2.71868182845905
 	resultado = 1.0D0	
 	
 	print *, 'Entre com a ordem: '
@@ -19,6 +20,8 @@ c e^x = 1 + x + x²/2 + x³/3
 	
 	print *,resultado
 	read(*,*)
+	erro = erro - e
+	print *,erro
 	
 	end program
 	
